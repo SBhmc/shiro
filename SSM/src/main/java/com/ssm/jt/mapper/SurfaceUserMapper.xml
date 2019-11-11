@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.ssm.jt.mapper.SurfaceUserMapper" >
+  <resultMap id="BaseResultMap" type="com.ssm.jt.model.SurfaceUser" >
+    <constructor >
+      <arg column="uid" jdbcType="INTEGER" javaType="java.lang.Integer" />
+      <arg column="eid" jdbcType="INTEGER" javaType="java.lang.Integer" />
+      <arg column="uname" jdbcType="VARCHAR" javaType="java.lang.String" />
+      <arg column="upwd" jdbcType="VARCHAR" javaType="java.lang.String" />
+      <arg column="ujur" jdbcType="INTEGER" javaType="java.lang.Integer" />
+    </constructor>
+  </resultMap>
+  <select id="login" resultType="com.ssm.jt.model.SurfaceUser" parameterType="com.ssm.jt.model.SurfaceUser">
+    select uname,upwd
+    from t_surface_user
+    where uname=#{uname} and upwd=#{upwd}
+  </select>
+
+</mapper>

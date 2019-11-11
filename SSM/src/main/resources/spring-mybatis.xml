@@ -82,7 +82,7 @@
     <bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
         <!--basePackage 属性是映射器接口文件的包路径。-->
         <!--你可以使用分号或逗号 作为分隔符设置多于一个的包路径-->
-        <property name="basePackage" value="com/ssmhis/**/mapper"/>
+        <property name="basePackage" value="com/ssm/**/mapper"/>
         <property name="sqlSessionFactoryBeanName" value="sqlSessionFactory"/>
     </bean>
      <!--5.配置注解式事务（推荐使用声明式事务）-->
